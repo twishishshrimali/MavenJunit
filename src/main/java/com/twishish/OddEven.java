@@ -9,6 +9,7 @@ public class OddEven {
 		boolean result = false;
        if(number%2 == 0){
            result = true;
+		System.out.println("Number is Even"); 
        }
        return result;
     }
@@ -18,6 +19,7 @@ public class OddEven {
 		boolean result = false;
        if(number%2 != 0){
            result = true;
+		System.out.println("Number is Odd");
        }
        return result;
     }
