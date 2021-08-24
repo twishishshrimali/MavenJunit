@@ -1,6 +1,6 @@
 node {
   stage('SCM Chekout'){
-  https://github.com/twishishshrimali/MavenJunit
+  git 'https://github.com/twishishshrimali/MavenJunit'
   }
   stage('Compile-Package'){
   //get maven home path 
