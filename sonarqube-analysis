@@ -10,16 +10,16 @@ pipeline {
                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
             }
         }
-     stage('SonarQube analysis') {
-    def scannerHome = tool 'SonarScanner';
-    withSonarQubeEnv('SonarScanner') {
-      sh "${scannerHome}/bin/sonar-scanner \
-      -D sonar.login=admin \
-      -D sonar.password=123Password \
-      -D sonar.projectKey=sonarqubetest \
-      -D sonar.exclusions=/var/jenkins_home/workspace/JenkinsSonarPipeTry \
-      -D sonar.host.url=http://44.196.229.25:9000/"
-    }
-  }
- }
+        stage('SonarQube analysis') {
+             def scannerHome = tool 'SonarScanner';
+             withSonarQubeEnv('SonarScanner') {
+                 sh "${scannerHome}/bin/sonar-scanner \
+                  -D sonar.login=admin \
+                  -D sonar.password=123Password \
+                  -D sonar.projectKey=sonarqubetest \
+                  -D sonar.exclusions=/var/jenkins_home/workspace/JenkinsSonarPipeTry \
+                  -D sonar.host.url=http://44.196.229.25:9000/"
+              }
+          }
+     }
 }
