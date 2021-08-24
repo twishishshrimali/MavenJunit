@@ -1,5 +1,4 @@
 node {
-
   stage('SCM Chekout'){
   https://github.com/twishishshrimali/MavenJunit
   }
@@ -15,4 +14,5 @@ node {
   withSonarQubeEnv('SonarScanner') {
   sh "${mvnHome}/bin/mvn sonar:sonar"
   }
+}
 }
