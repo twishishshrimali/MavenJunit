@@ -22,6 +22,7 @@
   
  <build>
    <plugins>
+<plugin>
        <groupId>org.jacoco</groupId>
        <artifactId>jacoco-maven-plugin</artifactId>
        <version>0.8.2</version>
@@ -66,7 +67,6 @@
              <shutdown>kill</shutdown> <!-- Use it if required-->
              </configuration>
             </plugin>
-     <plugin>
-     </plugins>
+          </plugins>
  </build>   
  </project>
